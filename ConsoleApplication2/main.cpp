@@ -3,6 +3,7 @@
 #include <vector>
 #include "Store.h"
 #include "StoreInfo.h"
+#include "StoreTemplate.h"
 using namespace std;
 
 int main()
@@ -19,9 +20,18 @@ int main()
 
     mag.printInfo();
     cout << mag;
-    //StoreInfo magazine("https://example.com/products", 30, 150, 5000, 4.2f, 42, 8);
-
-    //magazine.printFullInfo();
+    StoreInfo magazine("https://example.com/products", 30, 150, 5000, 42, 8);
+    magazine.printInfo();
+    vector<Store*> myList;
+    
+    myList.push_back(new Store("https://example.com/product", 30, 10, 1000));
+    myList.push_back(new StoreInfo("https://example.com/products", 30, 150, 5000, 42, 8));
+    cout << "\n\n\n";
+    for (const Store* i : myList) {
+        i->printInfo();
+    }
+    StoreTemplate<float, 500> magTest("https://example.com/product", 340, 120, 4100.43);
+    magTest.printInfo();
     return 0;
 }
 /*

@@ -125,14 +125,38 @@ void Store::validateUpdate(unsigned int newPrice, unsigned int newCountProduct) 
     }
 
 };
-unsigned int Store::getCountDay() const { return countDay; }
-string Store::getUrl() const { return url; }
-unsigned int Store::getPrice() const { return price; }
-unsigned int Store::getCountProduct() const { return countProduct; }
-unsigned int Store::getDayMonitoring() const { return dayMonitoring; }
-unsigned int Store::getMaxPrice() const { return maxPrice; }
-unsigned int Store::getMinPrice() const { return minPrice; }
-unsigned int Store::getDrawPrice() const { return drawPrice; }
+unsigned int Store::getCountDay() const 
+{
+    return countDay; 
+}
+string Store::getUrl() const 
+{
+    return url; 
+}
+unsigned int Store::getPrice() const 
+{
+    return price;
+}
+unsigned int Store::getCountProduct() const 
+{ 
+    return countProduct;
+}
+unsigned int Store::getDayMonitoring() const 
+{
+    return dayMonitoring;
+}
+unsigned int Store::getMaxPrice() const 
+{
+    return maxPrice;
+}
+unsigned int Store::getMinPrice() const 
+{ 
+    return minPrice; 
+}
+unsigned int Store::getDrawPrice() const 
+{
+    return drawPrice;
+}
 
 bool Store::checkExtraBuy() const
 {

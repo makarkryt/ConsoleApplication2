@@ -131,11 +131,13 @@
     <ClCompile Include="Store.cpp" />
     <ClCompile Include="StoreException.cpp" />
     <ClCompile Include="StoreInfo.cpp" />
+    <ClCompile Include="StoreTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Store.h" />
     <ClInclude Include="StoreException.h" />
     <ClInclude Include="StoreInfo.h" />
+    <ClInclude Include="StoreTemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

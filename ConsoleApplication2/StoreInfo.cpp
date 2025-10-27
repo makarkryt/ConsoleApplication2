@@ -5,11 +5,10 @@ StoreInfo::StoreInfo(
     unsigned int dayMonitoring, 
     unsigned int countProduct, 
     unsigned int price, 
-    const float rating, // TODO убрать
     const unsigned int positiveReviews, 
     const unsigned int negativeReviews):
 	Store(url, dayMonitoring, countProduct, price),
-    rating(0),
+    rating(positiveReviews / (negativeReviews + positiveReviews) * 5.0f),
     positiveReviews(positiveReviews),
     negativeReviews(negativeReviews)
 {} // TODO расчитать рейтинг
@@ -21,8 +20,8 @@ void StoreInfo::setReviews(bool Reviews) {
     rating = positiveReviews / (negativeReviews + positiveReviews) * 5.0f;
 }
 
-void StoreInfo::printFullInfo() { // TODO изменить название
-    printInfo();
+void StoreInfo::printInfo() const { // TODO изменить название
+    Store::printInfo();
     cout << "=== ƒќѕќЋЌ»“≈Ћ№Ќјя »Ќ‘ќ–ћј÷»я ===" << endl;
     cout << "ƒень мониторинга: " << getDayMonitoring() << endl;
     cout << "–ейтинг: " << rating << endl;

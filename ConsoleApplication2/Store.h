@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "StoreException.h"
+
 class Store
 {
 private:
@@ -41,8 +42,9 @@ public:
     PriceTrend checkDynamic() const;
     void updateData(unsigned int newPrice, unsigned int newCountProduct);
     const unsigned int& operator[] (size_t index) const;
-    void printInfo() const;
-    void printInfo(size_t day) const;
+    virtual void printInfo() const;
+    virtual void printInfo(size_t day) const;
     friend std::ostream& operator<<(std::ostream& os, const Store& obj);
+    virtual ~Store() = default;
 };
 

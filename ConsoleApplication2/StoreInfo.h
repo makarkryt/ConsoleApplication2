@@ -20,6 +20,6 @@ public:
     unsigned int getNegativeReviews() const;
     void setReviews(bool Reviews);
     friend std::ostream& operator<<(std::ostream& os, const StoreInfo& obj);
-    void printInfo() const override; // TODO const
+    void printInfo() const override;
 };
 
